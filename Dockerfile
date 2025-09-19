@@ -1,4 +1,4 @@
-FROM oven/bun:latest AS builder
+FROM oven/bun:alpine AS builder
 
 WORKDIR /app
 
@@ -10,11 +10,15 @@ COPY . .
 
 RUN bun run build
 
+RUN apk add --update --no-cache openssl1.1-compat
+
 RUN bunx prisma generate
 
-FROM oven/bun:latest
+FROM oven/bun:alpine
 
 WORKDIR /app
+
+RUN apk add --update --no-cache openssl1.1-compat
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/.sern ./.sern
