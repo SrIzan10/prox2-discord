@@ -2,7 +2,7 @@ FROM oven/bun:latest AS builder
 
 WORKDIR /app
 
-COPY package.json bun.lock* sern.config.json ./
+COPY package.json bun.lock* sern.config.json tsconfig.json ./
 
 RUN bun install
 
