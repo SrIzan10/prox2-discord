@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "sern build",
-    "start": "bunx prisma generate && bunx prisma migrate deploy && bun run .",
+    "start": "bunx prisma migrate deploy && bun run .",
     "install": "sern build",
     "commands:publish": "sern commands publish",
     "dev": "sern build -w --watch-command \"bun start\""
