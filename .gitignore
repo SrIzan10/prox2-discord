@@ -1,0 +1,7 @@
+/node_modules
+/dist
+.env
+.sern/
+
+/generated/generated/prisma
+*sqlite.db
