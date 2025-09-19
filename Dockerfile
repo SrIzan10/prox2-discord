@@ -1,8 +1,11 @@
-FROM oven/bun:alpine AS builder
+FROM oven/bun:latest AS builder
 
 WORKDIR /app
 
 COPY package.json bun.lock* sern.config.json tsconfig.json ./
+
+RUN apt-get update -y \
+&& apt-get install -y openssl
 
 RUN bun install
 
@@ -10,15 +13,14 @@ COPY . .
 
 RUN bun run build
 
-RUN apk add --update --no-cache openssl1.1-compat
-
 RUN bunx prisma generate
 
-FROM oven/bun:alpine
+FROM oven/bun:latest
 
 WORKDIR /app
 
-RUN apk add --update --no-cache openssl1.1-compat
+RUN apt-get update -y \
+&& apt-get install -y openssl
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/.sern ./.sern
