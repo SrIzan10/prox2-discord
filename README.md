@@ -17,6 +17,12 @@ it is heavily inspired by hack club's prox2.
 - encrypted everything
 - uhh it works i guess
 
+## Commands
+- `/setup` - sets up the bot in your server (admin only)
+- `/prox2` - post an anonymous message
+- `/reply` - replies to your own post
+- `/unsetup` - removes previous configuration (admin only)
+
 ## Development
 
 - clone this
