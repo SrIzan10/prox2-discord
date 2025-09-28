@@ -35,7 +35,7 @@ export default commandModule({
     const publicMsg = await publicChannel.send({
       content: `${bold(dbMessage.id.toString())}: ${dbMessage.content}`,
       components: [buttonGen()],
-      allowedMentions: { parse: ['users', 'roles'], repliedUser: true }
+      allowedMentions: { parse: [] }
     });
     publicMsg.startThread({
       name: `number ${dbMessage.id} discussion`
