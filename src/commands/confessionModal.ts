@@ -38,7 +38,7 @@ export default commandModule({
     const verifMsg = await verifChannel.send({
       content: confession,
       components: [buttons],
-      allowedMentions: { parse: ['users', 'roles'], repliedUser: true },
+      allowedMentions: { parse: [] },
     });
 
     await db.post.create({

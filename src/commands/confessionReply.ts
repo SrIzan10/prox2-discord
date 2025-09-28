@@ -34,7 +34,7 @@ export default commandModule({
 
     await ctx.channel.send({
       content: text,
-      allowedMentions: { parse: ['users', 'roles'], repliedUser: true }
+      allowedMentions: { parse: [] }
     });
     return ctx.deferUpdate();
   },
