@@ -54,6 +54,4 @@ model ReplyUser {
   postId Int
   post Post @relation(fields: [postId], references: [id])
   userHash String
-
-  @@unique([guildId, userHash])
 }
