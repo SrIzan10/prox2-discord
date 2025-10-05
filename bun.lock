@@ -5,7 +5,7 @@
       "name": "ts-example",
       "dependencies": {
         "@prisma/client": "^6.16.2",
-        "@sern/handler": "^4.0.0",
+        "@sern/handler": "^4.2.6",
         "@sern/publisher": "^1.1.1",
         "discord.js": "latest",
         "dotenv": "^16.3.1",
@@ -110,7 +110,7 @@
 
     "@sern/cli": ["@sern/cli@1.4.0", "", { "dependencies": { "@esbuild-kit/cjs-loader": "^2.4.2", "@esbuild-kit/esm-loader": "^2.5.5", "colorette": "2.0.20", "commander": "11.0.0", "dotenv": "^16.3.1", "esbuild": "^0.19.1", "execa": "7.2.0", "find-up": "6.3.0", "glob": "^10.3.3", "ora": "6.3.1", "prompts": "2.4.2", "undici": "5.23.0" }, "bin": { "sern": "dist/index.js" } }, "sha512-IePGYYJvIVwNtnukblYxE2X7hiFivLa/p4UVaMi0XLpZ+Fa3BAdsSiBKRzLtBYWl8J2Se9StLSFwBYQW7ik+/Q=="],
 
-    "@sern/handler": ["@sern/handler@4.2.5", "", { "dependencies": { "@sern/ioc": "^1.1.2", "callsites": "^3.1.0", "cron": "^3.1.7", "deepmerge": "^4.3.1" } }, "sha512-ASvJMJf8agvn7J7jZVu7ujTEb8xycA34PG+sXu28HqxGXqvCea4LsRbX3MrAxw3FE+bPQRLc3mYreKc50lmChg=="],
+    "@sern/handler": ["@sern/handler@4.2.6", "", { "dependencies": { "@sern/ioc": "^1.1.2", "callsites": "^3.1.0", "cron": "^3.1.7", "deepmerge": "^4.3.1" } }, "sha512-LuRs56kVsZKNZ8KRSTdFDrjIv12u62rmHqfwHocjOEF/1LMA2Xd5qDjntaaHOLRTN4il1ZiY3mXRJUHVpMDHYA=="],
 
     "@sern/ioc": ["@sern/ioc@1.1.2", "", {}, "sha512-n84w7n5hB1dl8N6dfSbeYIo0QYORMS1bpG/P7J7GoMNTu8c28EYVZ8uGs3Md9GB09UseOKn3mfv1QBDtRsbb1g=="],
 

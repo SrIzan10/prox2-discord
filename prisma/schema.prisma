@@ -23,6 +23,7 @@ model Post {
   publicMsgId String?
 
   votes Vote[]
+  replyUsers ReplyUser[]
 }
 
 model Vote {
@@ -43,4 +44,16 @@ model GuildConfig {
   guildId String @unique
   verifChannelId String
   publicChannelId String
+}
+
+model ReplyUser {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  guildId String
+  userId Int @unique
+  postId Int
+  post Post @relation(fields: [postId], references: [id])
+  userHash String
+
+  @@unique([guildId, userHash])
 }
