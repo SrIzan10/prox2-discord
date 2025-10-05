@@ -50,7 +50,7 @@ model ReplyUser {
   id Int @id @default(autoincrement())
   createdAt DateTime @default(now())
   guildId String
-  userId Int @unique
+  userId Int
   postId Int
   post Post @relation(fields: [postId], references: [id])
   userHash String
