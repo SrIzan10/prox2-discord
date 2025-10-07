@@ -50,11 +50,18 @@ export default commandModule({
         text,
         db: sdt.deps.prisma,
       });
-      return await ctx.reply({
+      await ctx.channel.send({
         content: confessionReply.content,
         flags: confessionReply.flags,
         allowedMentions: { parse: [] },
       });
+      const reply = await ctx.reply({
+        content: 'sent your reply!',
+        flags: MessageFlags.Ephemeral,
+      });
+      setTimeout(() => {
+        reply.delete().catch(() => null);
+      }, 500);
     } else {
       const modal = new ModalBuilder().setCustomId('confessionReply').setTitle('Send a reply');
 
